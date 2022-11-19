@@ -1,15 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HelpFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HelpFragment"
+    android:background="@color/background">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Поддержка"
-        />
+   <androidx.cardview.widget.CardView
+       app:layout_constraintTop_toTopOf="parent"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:cardCornerRadius="15dp"
+       app:cardElevation="3dp"
+       android:background="@color/white"
+       android:layout_marginHorizontal="16dp"
+       android:layout_marginTop="50dp">
 
-</FrameLayout>
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+         <TextView
+             android:id="@+id/title"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             android:layout_marginTop="20dp"
+             android:layout_marginStart="23dp"
+             android:text="Поддержка"
+             android:textSize="17sp"
+             android:textStyle="bold"
+             android:textColor="@color/black"/>
+
+         <TextView
+             android:id="@+id/text_help"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/title"
+             android:layout_marginHorizontal="23dp"
+             android:layout_marginTop="8dp"
+             android:text="Единая диспетчерская Махачкалы поможет в ситуации, если в квартире похолодало
+в отопительный сезон, была отключена горячая вода горячей воды и тп.
+
+Мы поможем вызвать аварийную службу прикрепленную по адресу дома"
+             android:textSize="14sp"
+             android:textColor="@color/black"/>
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:id="@+id/constraint_chat"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:background="@drawable/grey_corners"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toStartOf="@id/constraint_phone"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/text_help"
+             android:layout_marginHorizontal="23dp"
+             android:layout_marginVertical="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+               <ImageView
+                   android:id="@+id/icon_chat"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toStartOf="@id/txt_chat"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   android:src="@drawable/ic_vector_chat"
+                   android:paddingTop="8dp"
+                   android:paddingBottom="8dp"
+                   android:paddingLeft="5dp"
+                   android:paddingRight="5dp"/>
+
+               <TextView
+                   android:id="@+id/txt_chat"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:gravity="center"
+                   android:text="Чат"
+                   android:textColor="#000000"
+                   android:textSize="12sp"
+                   android:textStyle="bold"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toEndOf="@id/icon_chat"
+                   app:layout_constraintTop_toTopOf="parent"
+                   android:paddingTop="8dp"
+                   android:paddingBottom="8dp"
+                   android:paddingLeft="5dp"
+                   android:paddingRight="5dp"/>
+
+            </LinearLayout>
+
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:id="@+id/constraint_phone"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/text_help"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toEndOf="@id/constraint_chat"
+             android:layout_marginEnd="20dp"
+             android:background="@drawable/grey_corners">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_vector_phone"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                />
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+   </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

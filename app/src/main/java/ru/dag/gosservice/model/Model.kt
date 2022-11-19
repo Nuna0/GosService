@@ -20,3 +20,11 @@ data class Category(
     var name: String,
     var id: Int
 )
+
+data class News(
+    var image: Drawable?,
+    var title: String,
+    var date: String
+)
+
+

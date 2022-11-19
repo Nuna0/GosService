@@ -31,7 +31,7 @@
                 android:textColor="@color/black" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/categoryRecycler"
+                android:id="@+id/newsRecycler"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/title_news"
                 android:layout_marginTop="16dp"
@@ -39,7 +39,6 @@
                 android:layout_height="wrap_content"
                 android:nestedScrollingEnabled="false"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                android:layout_marginHorizontal="8dp"
                 />
 
 

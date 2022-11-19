@@ -27,7 +27,15 @@
 
     <style name="CircleImageView">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">10%</item>
+        <item name="cornerSizeTopRight">20dp</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeBottomLeft">20dp</item>
+        <item name="cornerSizeBottomRight">20dp</item>
+    </style>
+
+    <style name="CornersImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerRadius">15dp</item>
     </style>
 
 </resources>
