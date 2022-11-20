@@ -9,7 +9,11 @@
         android:id="@+id/mainFragment"
         android:name="ru.dag.gosservice.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_addClaimFragment"
+            app:destination="@id/addClaimFragment" />
+    </fragment>
     <fragment
         android:id="@+id/newsFragment"
         android:name="ru.dag.gosservice.NewsFragment"
@@ -22,4 +26,13 @@
         android:name="ru.dag.gosservice.HelpFragment"
         android:label="fragment_help"
         tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/addClaimFragment"
+        android:name="ru.dag.gosservice.AddClaimFragment"
+        android:label="fragment_add_claim"
+        tools:layout="@layout/fragment_add_claim" >
+        <action
+            android:id="@+id/action_addClaimFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
 </navigation>

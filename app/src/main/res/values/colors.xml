@@ -10,4 +10,5 @@
     <color name="navselected">#0D2067</color>
     <color name="blue">#3478F6</color>
     <color name="background">#F5F5F5</color>
+    <color name="back_photo">#1A3478F6</color>
 </resources>

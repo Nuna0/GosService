@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import ru.dag.gosservice.adapters.AdapterBestPlaces
 import ru.dag.gosservice.adapters.AdapterCategory
 import ru.dag.gosservice.databinding.FragmentMainBinding
@@ -60,6 +61,18 @@ class MainFragment : Fragment() {
         categoryAdapter.setData(listCategory)
         binding.categoryRecycler.adapter = categoryAdapter
 
+        binding.icAdd.setOnClickListener {
+            goToClaim()
+        }
+
+        binding.txtAddClaim.setOnClickListener {
+            goToClaim()
+        }
+
+    }
+
+    fun goToClaim(){
+        findNavController().navigate(R.id.action_mainFragment_to_addClaimFragment)
     }
 
 }
